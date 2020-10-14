@@ -11,7 +11,7 @@ float angvec(float *aVec, float *bVec, unsigned int vecSize) {
     float costhita = 0;
     float thita = 0;
     for (unsigned int i = 0; i < vecSize; i++) {
-        dotpr += ((aVec[i])*(bVec[i]));
+        dotpr += ((aVec[i])*(bVec[i]));   // dot product of two angles
         norma += pow(aVec[i], 2);
         normb += pow(bVec[i], 2);
     }
