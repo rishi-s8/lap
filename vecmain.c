@@ -1,26 +1,28 @@
 #include <stdio.h>
 #include "veclib.h"
+#include "vecnorm.c"
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
   printf("Enter size of the vector: ");
   unsigned int n;
   scanf("%d", &n);
   float vec1[n], vec2[n], vecRes[n];
-  float dotProduct, angle;
+  float norm, dotProduct, angle;
+  int status;
 
   printf("Enter the first vector: ");
-  for(unsigned int i=0; i<n; ++i)
+  for (unsigned int i = 0; i < n; ++i)
   {
-    scanf("%f",vec1+i);
+    scanf("%f", vec1 + i);
   }
   printf("Enter the second vector: ");
-  for(unsigned int i=0; i<n; ++i)
+  for (unsigned int i = 0; i < n; ++i)
   {
-    scanf("%f",vec2+i);
+    scanf("%f", vec2 + i);
   }
 
-  int status = sumVec(vec1, vec2, vecRes, n);
+  status = sumVec(vec1, vec2, vecRes, n);
   if(status)
   {
     printf("Sum: ");
@@ -53,6 +55,13 @@ int main(int argc, char* argv[])
     printf("\n\n");
   }
 
+  status = normVec(vec1, vec2, n);
+  if (status)
+  {
+    norm = normVec(vec1, vec2, n);
+    printf("Norm: %.2f\n\n", norm);
+  }
+  
   dotProduct = dotProductVec(vec1, vec2, n);
   printf("Dot Product: %f\n\n", dotProduct);
 
