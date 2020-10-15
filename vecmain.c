@@ -2,6 +2,7 @@
 #include "veclib.h"
 #include "vecnorm.c"
 #include "vecprod.c"
+#include "vecdot.c"
 
 int main(int argc, char *argv[])
 {
