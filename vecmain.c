@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "veclib.h"
 #include "vecnorm.c"
+#include "vecangle.c"
 
 int main(int argc, char *argv[])
 {
