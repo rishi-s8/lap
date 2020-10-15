@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "veclib.h"
+#include "vecadd.c"
 #include "vecnorm.c"
 #include "vecprod.c"
 #include "vecdot.c"
