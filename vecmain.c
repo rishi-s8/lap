@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include "vecadd.c"
 #include "vecnorm.c"
+#include "vecangle.c"
 #include "vecprod.c"
 #include "vecdot.c"
 #include "vecdiff.h"
+
 
 int main(int argc, char *argv[])
 {
