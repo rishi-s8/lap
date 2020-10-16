@@ -6,12 +6,12 @@
   // This program returns the dot product of two vectors.  
 */
 
-float dotProductVec(float *vec1,float *vec2,unsigned int vecSize)
+float dotProductVec(float *aVec,float *bVec,unsigned int vecSize)
 {	
     float dotProduct;
     for(unsigned int i = 0; i<vecSize; i++)
     {
-        dotProduct = dotProduct+vec1[i]*vec2[i];
+        dotProduct = dotProduct+aVec[i]*bVec[i];
     }
     return dotProduct;
 }
